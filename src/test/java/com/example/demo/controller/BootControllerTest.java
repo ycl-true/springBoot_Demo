@@ -19,6 +19,7 @@ public class BootControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
+    // TEST1
     @Test
     public void getValues7() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/boot/getValues7"))
