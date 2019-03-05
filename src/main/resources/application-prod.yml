@@ -1,0 +1,33 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /demo
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:8078/test?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 11111
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+  thymeleaf:
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    cache: false
+
+mybatis:
+  typeAliasesPackage: com.example.demo.entity
+  mapperLocations: classpath:mapper/*.xml
+
+logging:
+    level:
+      com.example.demo.dao: debug
+
+
+test: 666666
+longTest: "show:${test}"
+
+configs:
+  value1: 1
+  value2: 2
