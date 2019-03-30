@@ -21,6 +21,7 @@ public class UserExceptionHandle {
             return ApplyUtil.getResult(userEx.getCode(), e.getMessage(), null);
         }
         logger.error("系统异常 {}", e);
+        // 系统异常
         return ApplyUtil.getResult(-1, e.getMessage(), null);
     }
 }

@@ -5,6 +5,7 @@ import com.example.demo.dao.UserDao;
 import com.example.demo.entity.User;
 import com.example.demo.exception.UserException;
 import com.example.demo.service.UserService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -33,7 +34,7 @@ public class BootController {
     @Autowired
     private configs config;
 
-    @RequestMapping(value = "getUser")
+    @GetMapping(value = "getUser")
     public User getUser() {
         User user = new User();
         user.setUserName("test");
